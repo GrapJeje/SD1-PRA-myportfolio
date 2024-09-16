@@ -17,9 +17,7 @@ footer {
     justify-content: center;
     align-items: center;
     padding: 5px;
-    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
     border-radius: 15px;
-    flex-shrink: 0;
     margin-top: 1%;
 }
 
@@ -200,6 +198,18 @@ a:hover {
 
 .cheatsheet-div-cat {
     padding: 0 2% 0 12%
+}
+
+.cheatsheet-back-box {
+    position: fixed;
+    width: 10%;
+    background-color: lightgrey;
+    bottom: 5%;
+    display: flex;
+    border-radius: 25px;
+    right: 0;
+    margin-right: 1%;
+    padding: 0% 0% 0% 1%;
 }
 
 /* Reflectie */
