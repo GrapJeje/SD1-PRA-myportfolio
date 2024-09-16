@@ -31,6 +31,11 @@
             <p><strong>Micro-Bit</strong></p>
         </div>
     </a>
+    <a href="CheatSheet.html#sprite">
+        <div class="cheatsheet-nav-child-container">
+            <p><strong>Sprites</strong></p>
+        </div>
+    </a>
     <a href="CheatSheet.html#html">
         <div class="cheatsheet-nav-child-container">
             <p><strong>HTML</strong></p>
@@ -120,6 +125,104 @@
         <div class="cheatsheet-div-heading"><strong>Set Brightness</strong></div>
         <div class="cheatsheet-div-descrp">
             De <strong>set brightness</strong>-functie stelt de helderheid van de leds in. Hoe hoger de waarde, hoe feller de leds.
+        </div>
+    </div>
+
+    <br>
+    <h1 class="cheatsheet-div-cat" id="sprite">Sprite</h1>
+
+    <div class="cheatsheet-div">
+        <div class="cheatsheet-div-heading"><strong>Move Sprite</strong></div>
+        <div class="cheatsheet-div-descrp">
+            Je kunt een sprite bewegen over het scherm door de x- en y-positie van de sprite te wijzigen. Bijvoorbeeld:
+            <pre><code>let sprite = game.createSprite(2, 2)
+    sprite.move(1)</code></pre>
+        </div>
+    </div>
+    
+    <div class="cheatsheet-div">
+        <div class="cheatsheet-div-heading"><strong>Draw Sprite</strong></div>
+        <div class="cheatsheet-div-descrp">
+            Een sprite tekenen op het scherm kan door een patroon te gebruiken. De Micro:bit heeft een 5x5 LED-matrix waarop je sprites kunt tonen. Bijvoorbeeld:
+            <pre><code>let sprite = game.createSprite(2, 2)
+    sprite.setImage(`
+    . # # # .
+    # . . . #
+    # . . . #
+    # . . . #
+    . # # # .
+    `)</code></pre>
+        </div>
+    </div>
+    
+    <div class="cheatsheet-div">
+        <div class="cheatsheet-div-heading"><strong>Check Collision</strong></div>
+        <div class="cheatsheet-div-descrp">
+            Je kunt controleren of twee sprites elkaar raken of overlappen. Dit is handig voor spelletjes. Bijvoorbeeld:
+            <pre><code>let sprite1 = game.createSprite(1, 1)
+    let sprite2 = game.createSprite(2, 2)
+    if (sprite1.isTouching(sprite2)) {
+        basic.showString("Hit!")
+    }</code></pre>
+        </div>
+    </div>
+    
+    <div class="cheatsheet-div">
+        <div class="cheatsheet-div-heading"><strong>Set Sprite Image</strong></div>
+        <div class="cheatsheet-div-descrp">
+            Sprites kunnen verschillende afbeeldingen gebruiken. Je kunt een afbeelding instellen voor een sprite. Bijvoorbeeld:
+            <pre><code>let sprite = game.createSprite(2, 2)
+    sprite.setImage(`
+    . # # . .
+    # . . # #
+    # . . # #
+    . # # . .
+    `)</code></pre>
+        </div>
+    </div>
+    
+    <div class="cheatsheet-div">
+        <div class="cheatsheet-div-heading"><strong>Set Sprite Visibility</strong></div>
+        <div class="cheatsheet-div-descrp">
+            Je kunt bepalen of een sprite zichtbaar is of niet. Dit is handig om een sprite tijdelijk te verbergen. Bijvoorbeeld:
+            <pre><code>let sprite = game.createSprite(2, 2)
+    sprite.setLedColor(0xFF0000)
+    sprite.setVisible(false)</code></pre>
+        </div>
+    </div>
+    
+    <div class="cheatsheet-div">
+        <div class="cheatsheet-div-heading"><strong>Change Sprite Properties</strong></div>
+        <div class="cheatsheet-div-descrp">
+            Je kunt verschillende eigenschappen van een sprite aanpassen, zoals de grootte en het uiterlijk. Bijvoorbeeld:
+            <pre><code>let sprite = game.createSprite(2, 2)
+    sprite.setImage(`
+    . # # # .
+    # . . . #
+    # . . . #
+    # . . . #
+    . # # # .
+    `)
+    sprite.setRotation(90)</code></pre>
+        </div>
+    </div>
+    
+    <div class="cheatsheet-div">
+        <div class="cheatsheet-div-heading"><strong>Sprite Interaction</strong></div>
+        <div class="cheatsheet-div-descrp">
+            Sprites kunnen reageren op gebruikersinvoer, zoals knoppen of beweging van het apparaat. Bijvoorbeeld:
+            <pre><code>let sprite = game.createSprite(2, 2)
+    input.onButtonPressed(Button.A, () => {
+        sprite.move(1)
+    })
+    input.onGesture(Gesture.Shake, () => {
+        sprite.setImage(`
+        . . . . .
+        . # # # .
+        . # . # .
+        . # . # .
+        . # # # .
+        `)})</code></pre>
         </div>
     </div>
 
@@ -246,7 +349,14 @@
     <div class="cheatsheet-div-descrp">
         De <strong>position</strong>-eigenschap in CSS bepaalt hoe een element wordt gepositioneerd ten opzichte van zijn normale positie of zijn oudercontainer. De waarden kunnen zijn: <code>static</code>, <code>relative</code>, <code>absolute</code>, <code>fixed</code>, en <code>sticky</code>.
     </div>
+</div>
 
+
+    <a href="CheatSheet.html">
+        <div class="cheatsheet-back-box img-shadow">
+            <p><strong>Naar boven</strong></p>
+        </div>
+    </a>
 
     </main>
 
